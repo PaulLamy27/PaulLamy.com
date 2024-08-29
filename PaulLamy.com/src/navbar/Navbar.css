@@ -1,0 +1,33 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content:space-between;
+    align-items: center; 
+    height: 6rem;
+    width: 100%;
+    margin: 0 6px;
+    padding: 0 1rem;
+}
+
+.navbar strong {
+    left: 1rem;
+}
+
+.link-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 20px;
+    right: 0;
+}
+
+.link-icons h5 {
+    margin: 20px;    
+}
+
+#paul-lamy {
+    color: #8ACE00;
+}
