@@ -1,0 +1,12 @@
+body {
+    /* margin-top: 6rem; */
+}
+
+.container {
+    height: 100%;
+}
+
+.text {
+    margin-top: 20px;
+    color: palevioletred;
+}

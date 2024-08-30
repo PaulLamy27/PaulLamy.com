@@ -1,9 +1,13 @@
-import React from 'react'
+import './Hero.css'
 
 const Hero = () => {
     return (
         <>
-            <strong>HERO COMP</strong>
+            <div className="container">
+                <h1 className='text'>👋 Hi! I'm Paul</h1>
+            </div>
+
+            {/* <strong classNameName='text'>HERO COMP</strong> */}
         </>
     )
 }
