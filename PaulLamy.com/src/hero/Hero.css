@@ -8,5 +8,8 @@ body {
 
 .text {
     margin-top: 20px;
+    padding: 6rem;
+    text-align: center;
+    font-size: 6rem;
     color: palevioletred;
 }

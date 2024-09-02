@@ -1,7 +1,14 @@
 import './Tech.css'
+// import { ReactSVG } from 'react-svg';
+import '../assets/react.svg'
+import Image from './Image';
 
+// define props passed into the function.
 interface TechProps {
+    // ex: "Best at", "What have i been doing recently", etc.
     title: string;
+    // each item represents a technology i know,
+    // which has an image and the name of that technology
     items: Technology[]
 }
 
@@ -13,12 +20,12 @@ export const Tech = ({ title, items }: TechProps) => {
                     {title}:
                 </strong>
                 <div className='grid'>
-                    {items.map(item => {
+                    {items.map((item,index) => {
                         return <>
-                            <div className="tech-grid-item">
-                                <img src={item.imagePath}></img>
-                                <h1>{item.description}</h1>
-                            </div>
+                            {/* <div className="tech-grid-item">
+                                <h3>{item.description}</h3>
+                            </div> */}
+                            <Image src={item.imagePath} alt={item.description} key={index}/>
                         </>
                     })}
                 </div>

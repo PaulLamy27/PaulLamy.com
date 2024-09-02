@@ -13,8 +13,14 @@
 
 .navbar, .hero, .footer {
   padding: 20px; /* Adds some spacing */
+  display: block;
 }
 
 .hero {
+  /* display: block; */
   flex-grow: 1;
+}
+
+.tech {
+  display: block;
 }
