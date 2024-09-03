@@ -6,3 +6,8 @@
     display: grid;
     grid-template-columns: auto auto auto;
 }
+
+.tech-grid-item {
+    height: 10rem;
+    width: 10rem;
+}

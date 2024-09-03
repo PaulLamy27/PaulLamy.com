@@ -20,12 +20,12 @@ export const Tech = ({ title, items }: TechProps) => {
                     {title}:
                 </strong>
                 <div className='grid'>
-                    {items.map((item,index) => {
+                    {items.map((item, index) => {
                         return <>
-                            {/* <div className="tech-grid-item">
+                            <div className="tech-grid-item">
+                                <Image src={item.imagePath} alt={item.description} key={index} />
                                 <h3>{item.description}</h3>
-                            </div> */}
-                            <Image src={item.imagePath} alt={item.description} key={index}/>
+                            </div>
                         </>
                     })}
                 </div>
