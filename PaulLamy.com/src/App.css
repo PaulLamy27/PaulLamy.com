@@ -24,3 +24,29 @@
 .tech {
   display: block;
 }
+
+.projects-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project {
+  width: 100%;
+  display: flex;
+  margin: 2rem;
+}
+
+/* .projects {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  display: block;
+} */
+
+.project-elem {
+  display: block;
+  background-color: aquamarine;
+}
+
