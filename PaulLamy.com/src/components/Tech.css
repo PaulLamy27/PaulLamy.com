@@ -3,11 +3,33 @@
 }
 
 .grid {
+    /* background-color: ; */
+    margin: 2rem 6rem 6rem 2rem;
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto auto auto auto;
+    row-gap: 4rem;
+    column-gap: 4rem;
+    text-align: center;
+    /* horizional */
+    justify-content: center;
+    /* vertical */
+    align-items: center;
+}
+
+.tech-grid-item h3 {
+    background-color: antiquewhite;
 }
 
 .tech-grid-item {
+    cursor: pointer;
+    background-color: antiquewhite;
     height: 10rem;
     width: 10rem;
+}
+
+.tech-grid-container {
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

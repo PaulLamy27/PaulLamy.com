@@ -1,3 +1,10 @@
 * {
-  background-color: #2d2d2d;;
+  background-color: #2d2d2d;
+  font-size: x-large;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
 }

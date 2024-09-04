@@ -7,6 +7,7 @@ import Project from './projects/Project'
 import CardMentor from './assets/images/cardmentor.png'
 import TraceChain from './assets/images/tracechain.png'
 import Mat434 from './assets/images/mat434.png'
+import Contact from './contact/Contact'
 
 
 
@@ -65,19 +66,22 @@ function App() {
         <div className="intro"><Intro /></div>
         <div className="projects-container">
           <div className="project">
-            <Project title='CardMentor' description={cardMentorDesc} imagePath={CardMentor} />
+            <Project title='CardMentor' description={cardMentorDesc} imagePath={CardMentor} imageWidth='10rem' imageHeight='10rem'/>
           </div>
           <div className="project">
-            <Project title='TraceChain' description={tracechainDesc} imagePath={TraceChain} />
+            <Project title='TraceChain' description={tracechainDesc} imagePath={TraceChain} imageWidth='15rem' imageHeight='10rem'/>
           </div>
           <div className="project">
-            <Project title='MAT434 Movie Rating Prediction' description={mat434Desc} imagePath={Mat434} />
+            <Project title='MAT434 Movie Rating Prediction' description={mat434Desc} imagePath={Mat434} imageWidth='15rem' imageHeight='10rem'/>
           </div>
         </div>
         <div className="tech">
           <Tech title={bestTechnologiesTitle} items={bestTechnologiesArray} />
           <Tech title={alsoExperiencedTitle} items={alsoExperiencedArray} />
           <Tech title={whatIHaveBeenDoingTitle} items={whatIHaveBeenDoingArray} />
+        </div>
+        <div className="contact">
+          <Contact />
         </div>
 
       </div>
