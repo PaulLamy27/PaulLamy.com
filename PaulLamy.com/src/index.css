@@ -1,6 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+  font-family: "ContinuumLight";
+  src: url('./assets/fonts/ContinuumLight.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: "ContinuumBold";
+  src: url('./assets/fonts/ContinuumBold.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: "ContinuumMedium";
+  src: url('./assets/fonts/ContinuumMedium.ttf') format("truetype");
+}
+
+
+
 * {
-  background-color: #2d2d2d;
-  font-size: x-large;
+  background-color: #2e3034;
+  font-family: "Trebuchet MS";
+  /* font-family: "Light" */
+  /* font-size: 1rem; */
 }
 
 html,

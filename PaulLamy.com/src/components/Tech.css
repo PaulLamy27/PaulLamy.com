@@ -2,6 +2,10 @@
     display: block;
 }
 
+.container .title {
+    font-size: 1rem;
+}
+
 .grid {
     /* background-color: ; */
     margin: 2rem 6rem 6rem 2rem;
@@ -17,19 +21,32 @@
 }
 
 .tech-grid-item h3 {
-    background-color: antiquewhite;
+    background-color: rgb(123, 116, 107);
 }
 
 .tech-grid-item {
     cursor: pointer;
-    background-color: antiquewhite;
+    background-color: rgb(123, 116, 107);
     height: 10rem;
     width: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.tech-grid-item:hover {
+    transform: scale(1.15);
+    transition: all .2s ease-in-out;
 }
 
 .tech-grid-container {
     height: auto;
-    display: flex;
+    border-radius: 20px;
+    background-color: rgb(123, 116, 107);
+    /* display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
 }

@@ -1,5 +1,6 @@
-/* .img {
-    display: inline;
-    height: 10rem;
-    width: 10rem;
-} */
+.img {
+    background-color: rgb(123, 116, 107);
+    display: block;
+    /* align-items: center;
+    justify-content: center; */
+}

@@ -14,6 +14,13 @@
 
 .navbar strong {
     left: 1rem;
+    letter-spacing: 2px;
+    font-size: x-large;
+}
+
+.navbar strong,
+.link-icons h5 {
+    font-family: "ContinuumBold";
 }
 
 .link-icons {
@@ -25,9 +32,10 @@
 }
 
 .link-icons h5 {
+    font-size: large;
     margin: 20px;    
 }
 
 #paul-lamy {
-    color: #8ACE00;
+    color: #20bef7;
 }

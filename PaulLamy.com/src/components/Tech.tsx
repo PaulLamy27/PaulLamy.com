@@ -1,6 +1,5 @@
 import './Tech.css'
 // import { ReactSVG } from 'react-svg';
-import '../assets/react.svg'
 import Image from './Image';
 
 // define props passed into the function.
@@ -16,7 +15,7 @@ export const Tech = ({ title, items }: TechProps) => {
     return (
         <>
             <div className="container">
-                <strong>
+                <strong className='title'>
                     {title}:
                 </strong>
                 <div className='grid'>

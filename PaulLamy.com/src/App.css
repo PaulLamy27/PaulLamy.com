@@ -1,8 +1,32 @@
+/* continuum fonts */
+/* light */
+@font-face {
+  font-family: "ContinuumLight";
+  src: local("contl") url("./assets/fonts/contl.ttf") format("truetype");
+}
+
+/* bold */
+@font-face {
+  font-family: "ContinuumBold";
+  src: local("contb") url("./assets/fonts/contb.ttf") format("truetype");
+}
+
+/* medium */
+@font-face {
+  font-family: "ContinuumMedium";
+  src: local("contm") url("./assets/fonts/contm.ttf") format("truetype");
+}
+
+* {
+  font-family: "ContinuumLight";
+}
+
 .container {
   display: flex;
   flex-direction: column;
   /* align-items: stretch; */
-  width: 100%; /* Optional: sets the width of the container */
+  width: 100%;
+  /* Optional: sets the width of the container */
 }
 
 /* .container .navbar, 
@@ -11,8 +35,11 @@
   display: block;
 }   */
 
-.navbar, .hero, .footer {
-  padding: 20px; /* Adds some spacing */
+.navbar,
+.hero,
+.footer {
+  padding: 20px;
+  /* Adds some spacing */
   display: block;
 }
 
@@ -23,6 +50,7 @@
 
 .tech {
   display: block;
+  border-radius: 20px;
 }
 
 .projects-container {
@@ -33,9 +61,18 @@
 }
 
 .project {
-  width: 100%;
+  cursor: pointer;
+  width: 80%;
   display: flex;
   margin: 2rem;
+  background-color: #aaa6a4;
+  border-radius: 20px;
+  border-color: blueviolet;
+}
+
+.project:hover {
+  transform: scale(1.05);
+  transition: all .2s ease-in-out;
 }
 
 /* .projects {
@@ -49,4 +86,3 @@
   display: block;
   background-color: aquamarine;
 }
-

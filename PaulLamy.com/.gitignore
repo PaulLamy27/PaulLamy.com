@@ -28,3 +28,9 @@ dist-ssr
 ../pnpm-lock.yaml
 ../.dockerignore
 ../Dockerfile
+
+./node_modules/
+./package.json
+./pnpm-lock.yaml
+./.dockerignore
+./Dockerfile

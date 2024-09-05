@@ -1,4 +1,5 @@
 import './App.css'
+import './index.css'
 import Navbar from './navbar/Navbar'
 import Hero from './hero/Hero'
 import Intro from './intro/Intro'
@@ -9,11 +10,10 @@ import TraceChain from './assets/images/tracechain.png'
 import Mat434 from './assets/images/mat434.png'
 import Contact from './contact/Contact'
 
-
-
-
-
-
+// fonts
+// import "./assets/fonts/contb.ttf";
+// import "./assets/fonts/ContinuumLight.ttf";
+// import "./assets/fonts/contm.ttf";
 
 const bestTechnologiesTitle = "Best Technologies" as string;
 const bestTechnologiesArray = [
@@ -33,7 +33,7 @@ const alsoExperiencedTitle = "Also Experienced Using" as string;
 const alsoExperiencedArray = [
   { imagePath: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Python_logo_01.svg/2048px-Python_logo_01.svg.png", description: "Python" },
   { imagePath: "https://aety.io/wp-content/uploads/2016/11/java-logo-vector.png", description: "Java" },
-  { imagePath: "https://logos-world.net/wp-content/uploads/2022/01/NET-Framework-Symbol.png", description: "C#" },
+  { imagePath: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Logo_C_sharp.svg/1200px-Logo_C_sharp.svg.png", description: "C#" },
   { imagePath: "https://upload.wikimedia.org/wikipedia/commons/a/af/Tux.png", description: "Linux" },
   { imagePath: "https://miro.medium.com/v2/resize:fit:300/1*R4c8lHBHuH5qyqOtZb3h-w.png", description: "Firebase" },
   { imagePath: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Pandas_mark.svg/449px-Pandas_mark.svg.png", description: "Pandas" },
