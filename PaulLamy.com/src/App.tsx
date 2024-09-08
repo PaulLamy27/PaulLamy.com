@@ -56,6 +56,23 @@ const cardMentorDesc: string = 'Flashcard app for studying any discipline. Cards
 const tracechainDesc: string = "Social media app where the user adds a source to a post, and posts with sources can be filtered.";
 const mat434Desc: string = 'Final project for MAT434 Statistical Learning and Classification. Takes in and edits a list of 5000 films, performs basic EDA, and uses a prediction pipeline to predict the rating of a movie.';
 
+const redirect: Function = (hyperlink: string) => {
+  switch (hyperlink) {
+    case "CM":
+      window.open('https://github.com/PaulLamy27/CapstoneFlashcardApplication');
+      break;
+    case "TC":
+      window.open('https://github.com/Joshua-Burdick/TraceChain');
+      break;
+    case "M434":
+      window.open('https://github.com/PaulLamy27/Mat434Project/');
+      break;
+    default:
+      console.error("something happened with the switch!");
+      break;
+  }
+}
+
 function App() {
 
   return (
@@ -65,14 +82,14 @@ function App() {
         <div className="hero"><Hero /></div>
         <div className="intro"><Intro /></div>
         <div className="projects-container">
-          <div className="project">
-            <Project title='CardMentor' description={cardMentorDesc} imagePath={CardMentor} imageWidth='10rem' imageHeight='10rem'/>
+          <div className="project" onClick={() => redirect("CM")}>
+            <Project title='CardMentor' description={cardMentorDesc} imagePath={CardMentor} imageWidth='10rem' imageHeight='10rem' />
           </div>
-          <div className="project">
-            <Project title='TraceChain' description={tracechainDesc} imagePath={TraceChain} imageWidth='15rem' imageHeight='10rem'/>
+          <div className="project" onClick={() => redirect("TC")}>
+            <Project title='TraceChain' description={tracechainDesc} imagePath={TraceChain} imageWidth='15rem' imageHeight='10rem' />
           </div>
-          <div className="project">
-            <Project title='MAT434 Movie Rating Prediction' description={mat434Desc} imagePath={Mat434} imageWidth='15rem' imageHeight='10rem'/>
+          <div className="project" onClick={() => redirect("M434")}>
+            <Project title='MAT434 Movie Rating Prediction' description={mat434Desc} imagePath={Mat434} imageWidth='15rem' imageHeight='10rem' />
           </div>
         </div>
         <div className="tech">

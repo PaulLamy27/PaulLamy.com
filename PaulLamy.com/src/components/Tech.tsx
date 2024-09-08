@@ -11,13 +11,15 @@ interface TechProps {
     items: Technology[]
 }
 
+// I am willing to quickly learn and use any tool for the job, but here are the ones I have experience with:
+
 export const Tech = ({ title, items }: TechProps) => {
     return (
         <>
             <div className="container">
-                <strong className='title'>
+                <h1 className='title'>
                     {title}:
-                </strong>
+                </h1>
                 <div className='grid'>
                     {items.map((item, index) => {
                         return <>

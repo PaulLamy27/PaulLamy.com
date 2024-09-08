@@ -2,7 +2,7 @@
 {} */
 .image-container {
     margin-left: 4rem;
-    background-color: #aaa6a4;
+    background-color: #d1d1d1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,11 +12,11 @@
     margin-left: 4rem;
     margin-right: 2rem;
     margin-bottom: 4rem;
-    background-color: #aaa6a4;
+    background-color: #d1d1d1;
     /* background-color: #f5f5dc; */
 }
 
 .desc-container h1,
 .desc-container h2 {
-    background-color: #aaa6a4;
+    background-color: #d1d1d1;
 }

@@ -3,7 +3,7 @@
 }
 
 .container .title {
-    font-size: 1rem;
+    font-size: 2rem;
 }
 
 .grid {
@@ -21,12 +21,12 @@
 }
 
 .tech-grid-item h3 {
-    background-color: rgb(123, 116, 107);
+    background-color: #b3b2af;
 }
 
 .tech-grid-item {
     cursor: pointer;
-    background-color: rgb(123, 116, 107);
+    background-color: #b3b2af; 
     height: 10rem;
     width: 10rem;
     display: flex;
@@ -45,8 +45,12 @@
 .tech-grid-container {
     height: auto;
     border-radius: 20px;
-    background-color: rgb(123, 116, 107);
+    background-color: #b3b2af;
     /* display: flex;
     align-items: center;
     justify-content: center; */
+}
+
+.title {
+    font-size: x-large;
 }

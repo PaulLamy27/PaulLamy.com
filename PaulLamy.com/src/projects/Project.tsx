@@ -7,20 +7,20 @@ interface ProjectProps {
     imagePath: string;
     imageWidth?: string;
     imageHeight?: string;
-    //  gitHubLink: 
+    gitHubLink?: string;
     // techUsed: 
 }
 
 const Project = ({ title, description, imagePath, imageWidth, imageHeight }: ProjectProps) => {
     return (
         <>
-            <div></div>
             <div className="image-container">
                 <Image src={imagePath} alt={title} width={imageWidth} height={imageHeight} />
             </div>
             <div className="desc-container">
                 <h1>{title}</h1>
                 <h2>{description}</h2>
+                {/* <h2>https://github.com/PaulLamy27/CapstoneFlashcardApplication</h2> */}
             </div>
         </>
     )

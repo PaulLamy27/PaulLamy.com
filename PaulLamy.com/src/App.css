@@ -65,9 +65,9 @@
   width: 80%;
   display: flex;
   margin: 2rem;
-  background-color: #aaa6a4;
+  background-color: #d1d1d1;
   border-radius: 20px;
-  border-color: blueviolet;
+  /* border-color: blueviolet; */
 }
 
 .project:hover {
