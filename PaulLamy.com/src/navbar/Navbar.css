@@ -24,6 +24,7 @@
 }
 
 .link-icons {
+    cursor: pointer;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -32,6 +33,7 @@
 }
 
 .link-icons h5 {
+    cursor: pointer;
     font-size: large;
     margin: 20px;    
 }

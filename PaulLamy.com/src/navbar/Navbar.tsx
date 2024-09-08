@@ -9,10 +9,10 @@ const redirect = (location: string) => {
             window.location.href = 'https://github.com/PaulLamy27/';
             break;
         case "Resume":
-            window.location.href = 'https://www.linkedin.com/in/paullamy/';
+            window.location.href = 'https://docs.google.com/document/d/1TjgMDGQ8o3GnyDak06UYnoM8eRTWw81P/';
             break;
         case "Dev.to":
-            window.location.href = 'https://www.linkedin.com/in/paullamy/';
+            window.location.href = 'https://dev.to/paullamy27';
             break;
         default:
             console.error("something happened with the switch!");
