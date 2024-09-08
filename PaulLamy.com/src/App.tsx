@@ -1,3 +1,4 @@
+
 import './App.css'
 import './index.css'
 import Navbar from './navbar/Navbar'
@@ -52,6 +53,13 @@ const whatIHaveBeenDoingArray = [
   // { imagePath: "", description: "Data Science" }
 ] as Technology[];
 
+const CMTechUsed = [
+  { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1024px-React-icon.svg.png', alt: "React" },
+  // { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1024px-Typescript_logo_2020.svg.png', description: "TypeScript" },
+
+
+] as ImageType[];
+
 const cardMentorDesc: string = 'Flashcard app for studying any discipline. Cards you get wrong have a higher priority, so you see those cards more often. Includes a translation API for quickly translating phrases to different languages.';
 const tracechainDesc: string = "Social media app where the user adds a source to a post, and posts with sources can be filtered.";
 const mat434Desc: string = 'Final project for MAT434 Statistical Learning and Classification. Takes in and edits a list of 5000 films, performs basic EDA, and uses a prediction pipeline to predict the rating of a movie.';
@@ -83,7 +91,7 @@ function App() {
         <div className="intro"><Intro /></div>
         <div className="projects-container">
           <div className="project" onClick={() => redirect("CM")}>
-            <Project title='CardMentor' description={cardMentorDesc} imagePath={CardMentor} imageWidth='10rem' imageHeight='10rem' />
+            <Project title='CardMentor' description={cardMentorDesc} imagePath={CardMentor} imageWidth='10rem' imageHeight='10rem' techUsed={CMTechUsed} />
           </div>
           <div className="project" onClick={() => redirect("TC")}>
             <Project title='TraceChain' description={tracechainDesc} imagePath={TraceChain} imageWidth='15rem' imageHeight='10rem' />
@@ -107,3 +115,4 @@ function App() {
 }
 
 export default App
+

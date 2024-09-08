@@ -8,10 +8,11 @@ interface ProjectProps {
     imageWidth?: string;
     imageHeight?: string;
     gitHubLink?: string;
-    // techUsed: 
+    techUsed?: ImageType[];
 }
 
-const Project = ({ title, description, imagePath, imageWidth, imageHeight }: ProjectProps) => {
+// even if the props are optional, still pass them in as normal without ?
+const Project = ({ title, description, imagePath, imageWidth, imageHeight, techUsed }: ProjectProps) => {
     return (
         <>
             <div className="image-container">
@@ -20,7 +21,15 @@ const Project = ({ title, description, imagePath, imageWidth, imageHeight }: Pro
             <div className="desc-container">
                 <h1>{title}</h1>
                 <h2>{description}</h2>
-                {/* <h2>https://github.com/PaulLamy27/CapstoneFlashcardApplication</h2> */}
+                {
+                    techUsed?.map((image, index) => {
+                        return <>
+                            <div className="project-tech-images">
+                                <Image src={image.src} alt={image.alt} height="50px" width="50px" key={index}/>
+                            </div>
+                        </>
+                    })
+                }
             </div>
         </>
     )

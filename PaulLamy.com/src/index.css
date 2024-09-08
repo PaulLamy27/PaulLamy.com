@@ -15,11 +15,24 @@
   src: url('./assets/fonts/ContinuumMedium.ttf') format("truetype");
 }
 
+@font-face {
+  font-family: "SF Pro Text";
+  font-style: normal;
+  font-weight: 300;
+  src: url("https://raw.githubusercontent.com/blaisck/sfwin/master/SFPro/TrueType/SFProText-Light.ttf");
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 300;
+  src: url("https://raw.githubusercontent.com/blaisck/sfwin/master/SFPro/TrueType/SFProDisplay-Light.ttf");
+}
 
 
 * {
   background-color:whitesmoke;
-  font-family: "Trebuchet MS";
+  font-family: "SF Pro Display";
   /* font-family: "Light" */
   /* font-size: 1rem; */
 }
