@@ -1,6 +1,6 @@
 
 import './App.css'
-import './index.css'
+import '../index.css'
 import Navbar from './navbar/Navbar'
 import Hero from './hero/Hero'
 import Intro from './intro/Intro'
