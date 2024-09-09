@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "outDir": "./dist", // This tells TypeScript where to put the compiled files
     "target": "ES2022",
     "lib": ["ES2023"],
     "module": "ESNext",
