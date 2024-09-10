@@ -40,5 +40,7 @@
 html,
 body {
   max-width: 100%;
+  /* TODO: THIS MAKES IT ALMOST UNVIEWABLE
+  ON X-AXOS ON MOBILE  */
   overflow-x: hidden;
 }

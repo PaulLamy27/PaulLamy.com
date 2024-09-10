@@ -9,6 +9,7 @@
 }
 
 .desc-container {
+    /* display: flex; */
     margin-left: 4rem;
     margin-right: 2rem;
     margin-bottom: 4rem;
@@ -17,6 +18,25 @@
 }
 
 .desc-container h1,
-.desc-container h2 {
+.desc-container h2,
+/* the div that holds all of the images for tech used
+had some coloured background, which also needs to be transparent */
+.project-tech-images,
+.project-tech-container {
     background-color: transparent;
+}
+
+/* the tech images need to be in their own container in desc-container.
+this is because the images need to be in the desc container, 
+but the div that displays them needs to be flex to have
+the images align horizontally next to each other */
+.project-tech-container {
+    display: flex;
+}
+
+.project-tech-images {
+    display: flex;
+    margin: 0.5rem;
+    /* align-items: center; */
+    /* justify-content: center; */
 }

@@ -1,7 +1,3 @@
-body {
-    /* margin-top: 6rem; */
-}
-
 .container {
     height: 100%;
 }
@@ -9,8 +5,10 @@ body {
 
 .container .text {
     font-family: "ContinuumBold";
-    margin-top: 20px;
-    padding: 6rem;
+    margin-top: 10px;
+    padding-top: 2rem;
+    padding-left: 6rem;
+    padding-right: 6rem;
     text-align: center;
     font-size: 5rem;
     color: #63b9ff;

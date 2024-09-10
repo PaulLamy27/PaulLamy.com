@@ -12,3 +12,21 @@
     text-align: center;
     font-size: 3rem;
 }
+
+.contact-info-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-info-item {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 3rem;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.contact-info-item:hover {
+    transform: scale(1.05);
+}

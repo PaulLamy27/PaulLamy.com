@@ -39,6 +39,7 @@ const alsoExperiencedArray = [
   { imagePath: "https://miro.medium.com/v2/resize:fit:300/1*R4c8lHBHuH5qyqOtZb3h-w.png", description: "Firebase" },
   { imagePath: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Pandas_mark.svg/449px-Pandas_mark.svg.png", description: "Pandas" },
   { imagePath: "https://user-images.githubusercontent.com/50221806/86498201-a8bd8680-bd39-11ea-9d08-66b610a8dc01.png", description: "NumPy" },
+  { imagePath: "https://upload.wikimedia.org/wikipedia/commons/9/95/Vue.js_Logo_2.svg", description: "Vue" },
   // { imagePath: "https://w7.pngwing.com/pngs/679/344/png-transparent-wing-ide-integrated-development-environment-python-computer-software-eric-raspberry-miscellaneous-monochrome-computer-program.png", description: "TKinter" }
 ] as Technology[];
 const whatIHaveBeenDoingTitle = "What I Have Been Doing Recently" as string;
@@ -55,9 +56,27 @@ const whatIHaveBeenDoingArray = [
 
 const CMTechUsed = [
   { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1024px-React-icon.svg.png', alt: "React" },
-  // { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1024px-Typescript_logo_2020.svg.png', description: "TypeScript" },
+  { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1024px-Typescript_logo_2020.svg.png', alt: "TypeScript" },
+  { src: 'https://www.svgrepo.com/show/376337/node-js.svg', alt: "Node" },
+  { src: 'https://upload.wikimedia.org/wikipedia/labs/8/8e/Mysql_logo.png', alt: "MySQL" },
+  { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/1024px-Amazon_Web_Services_Logo.svg.png', alt: "AWS" },
+  { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/726px-CSS3_logo_and_wordmark.svg.png", alt: "CSS" },
+  { src: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg", alt: "Tailwind" },
+] as ImageType[];
 
+const TCTechUsed = [
+  { src: 'https://www.svgrepo.com/show/376337/node-js.svg', alt: "Node" },
+  { src: 'https://upload.wikimedia.org/wikipedia/commons/9/95/Vue.js_Logo_2.svg', alt: "Vue" },
+  { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1024px-Typescript_logo_2020.svg.png', description: "TypeScript" },
+  { src: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg", alt: "Tailwind" },
+  { src: 'https://cdnlogo.com/logos/m/30/mongodb-icon.svg', description: "MongoDB" },
+  { src: 'https://upload.wikimedia.org/wikipedia/commons/d/d1/Ionic_Logo.svg', description: "MongoDB" },
+] as ImageType[];
 
+const MAT434TechUsed = [
+  { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Python_logo_01.svg/2048px-Python_logo_01.svg.png", alt: "Python" },
+  { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Pandas_mark.svg/449px-Pandas_mark.svg.png", alt: "Pandas" },
+  { src: "https://user-images.githubusercontent.com/50221806/86498201-a8bd8680-bd39-11ea-9d08-66b610a8dc01.png", alt: "NumPy" },
 ] as ImageType[];
 
 const cardMentorDesc: string = 'Flashcard app for studying any discipline. Cards you get wrong have a higher priority, so you see those cards more often. Includes a translation API for quickly translating phrases to different languages.';
@@ -90,16 +109,18 @@ function App() {
         <div className="hero"><Hero /></div>
         <div className="intro"><Intro /></div>
         <div className="projects-container">
+          <h1>Here are the most recent projects I contributed to: </h1>
           <div className="project" onClick={() => redirect("CM")}>
             <Project title='CardMentor' description={cardMentorDesc} imagePath={CardMentor} imageWidth='10rem' imageHeight='10rem' techUsed={CMTechUsed} />
           </div>
           <div className="project" onClick={() => redirect("TC")}>
-            <Project title='TraceChain' description={tracechainDesc} imagePath={TraceChain} imageWidth='15rem' imageHeight='10rem' />
+            <Project title='TraceChain' description={tracechainDesc} imagePath={TraceChain} imageWidth='15rem' imageHeight='10rem' techUsed={TCTechUsed} />
           </div>
           <div className="project" onClick={() => redirect("M434")}>
-            <Project title='MAT434 Movie Rating Prediction' description={mat434Desc} imagePath={Mat434} imageWidth='15rem' imageHeight='10rem' />
+            <Project title='MAT434 Movie Rating Prediction' description={mat434Desc} imagePath={Mat434} imageWidth='15rem' imageHeight='10rem' techUsed={MAT434TechUsed} />
           </div>
         </div>
+        <h1> I am a quick learner and can work with any tool for the job, but here is what I have extensive experience with:</h1>
         <div className="tech">
           <Tech title={bestTechnologiesTitle} items={bestTechnologiesArray} />
           <Tech title={alsoExperiencedTitle} items={alsoExperiencedArray} />

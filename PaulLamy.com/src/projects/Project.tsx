@@ -21,15 +21,26 @@ const Project = ({ title, description, imagePath, imageWidth, imageHeight, techU
             <div className="desc-container">
                 <h1>{title}</h1>
                 <h2>{description}</h2>
-                {
+                <div className="project-tech-container">
+                    {
+                        techUsed?.map((image, index) => {
+                            return <>
+                                <div className="project-tech-images">
+                                    <Image src={image.src} alt={image.alt} height="50px" width="50px" key={index} />
+                                </div>
+                            </>
+                        })
+                    }
+                </div>
+                {/* {
                     techUsed?.map((image, index) => {
                         return <>
                             <div className="project-tech-images">
-                                <Image src={image.src} alt={image.alt} height="50px" width="50px" key={index}/>
+                                <Image src={image.src} alt={image.alt} height="50px" width="50px" key={index} />
                             </div>
                         </>
                     })
-                }
+                } */}
             </div>
         </>
     )
