@@ -20,7 +20,7 @@
 
 .navbar strong,
 .link-icons h5 {
-    font-family: "ContinuumBold";
+    font-family: "SF Pro Text";
 }
 
 .link-icons {
@@ -40,4 +40,13 @@
 
 #paul-lamy {
     color: #147da3;
+}
+
+.menu-button {
+    cursor: pointer;
+    margin: 0 20px;
+    width: 3rem;
+    height: 3rem;
+    align-items: center;
+    justify-content: center;
 }

@@ -1,4 +1,6 @@
+import { useState } from 'react';
 import './Navbar.css'
+import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 
 const redirect = (location: string) => {
     switch (location) {
@@ -21,16 +23,43 @@ const redirect = (location: string) => {
 }
 
 const Navbar = () => {
+
+    // hooks and functions relating to state go inside of this function
+    const [isVisible, setIsVisible] = useState(false);
+
+    const toggleMenu = () => {
+        console.log("toggle");
+        setIsVisible(!isVisible);
+    }
+
     return (
         <>
             <div className="navbar">
                 <strong id="paul-lamy">PaulLamy.com</strong>
-                <div className='link-icons'>
+                {
+                    !isVisible && <>
+                        <div className="menu-button" onClick={toggleMenu}>
+                            <AiOutlineMenu />
+                        </div>
+                    </>
+                }
+
+                {isVisible && <>
+                    <div className='link-icons'>
+                        <h5 onClick={() => redirect("LinkedIn")}>LinkedIn</h5>
+                        <h5 onClick={() => redirect("GitHub")}>GitHub</h5>
+                        <h5 onClick={() => redirect("Resume")}>Resume</h5>
+                        <h5 onClick={() => redirect("Dev.to")}>Dev.to</h5>
+                        <AiOutlineClose onClick={toggleMenu}/>
+                    </div>
+                </>
+                }
+                {/* <div className='link-icons'>
                     <h5 onClick={() => redirect("LinkedIn")}>LinkedIn</h5>
                     <h5 onClick={() => redirect("GitHub")}>GitHub</h5>
                     <h5 onClick={() => redirect("Resume")}>Resume</h5>
                     <h5 onClick={() => redirect("Dev.to")}>Dev.to</h5>
-                </div>
+                </div> */}
             </div>
         </>
     )
