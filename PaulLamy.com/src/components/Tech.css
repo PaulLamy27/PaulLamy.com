@@ -9,10 +9,16 @@
 .grid {
     /* background-color: ; */
     margin: 2rem 6rem 6rem 2rem;
-    display: grid;
-    grid-template-columns: auto auto auto auto auto;
+    
+    /* display: grid; */
+    /* grid-template-columns: auto auto auto auto auto;
     row-gap: 4rem;
-    column-gap: 4rem;
+    column-gap: 4rem; */
+    
+    /* make the items wrap around based on resize */
+    display: flex;
+    flex-wrap: wrap;
+
     text-align: center;
     /* horizional */
     justify-content: center;
@@ -44,7 +50,12 @@
 }
 
 .tech-grid-container {
+    display: flex;
+    flex-wrap: wrap;
     height: auto;
+
+    margin: 1rem;
+
     border-radius: 20px;
     background-color: #b3b2af;
     /* display: flex;
