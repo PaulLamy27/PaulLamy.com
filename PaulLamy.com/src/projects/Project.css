@@ -8,11 +8,28 @@
     align-items: center;
 }
 
+@media (width <=800px) {
+    .image-container {
+        margin: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+    }
+}
+
+/* .container {
+    background-color: #d1d1d1;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 20px;
+} */
+
 .desc-container {
-    /* display: flex; */
+    display: flex;
     margin-left: 4rem;
     margin-right: 2rem;
     margin-bottom: 4rem;
+    flex-wrap: wrap;
     background-color: #d1d1d1;
     /* background-color: #f5f5dc; */
 }
@@ -32,6 +49,7 @@ but the div that displays them needs to be flex to have
 the images align horizontally next to each other */
 .project-tech-container {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .project-tech-images {

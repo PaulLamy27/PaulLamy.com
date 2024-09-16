@@ -7,6 +7,16 @@
     height: 100%;
 }
 
+/* align the icons vertically to center of screen
+if window is resized (for mobile) */
+@media (width <= 700px) {
+    .contact-info-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
 
 .container h1 {
     text-align: center;
@@ -16,7 +26,6 @@
 .contact-info-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     align-items: center;
 }
 

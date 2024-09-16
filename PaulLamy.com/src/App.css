@@ -56,14 +56,25 @@
 .projects-container {
   width: 100%;
   display: flex;
+  /* flex-wrap: wrap;  */
   flex-direction: column;
   align-items: center;
+}
+
+@media (width <= 800px) {
+  .project {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .project {
   cursor: pointer;
   width: 80%;
   display: flex;
+  /* flex-wrap: wrap; */
   margin: 2rem;
   background-color: #d1d1d1;
   border-radius: 20px;
@@ -86,4 +97,10 @@
 .project-elem {
   display: block;
   background-color: aquamarine;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
