@@ -39,7 +39,7 @@ const Navbar = () => {
                 {
                     !isVisible && <>
                         <div className="menu-button" onClick={toggleMenu}>
-                            <AiOutlineMenu />
+                            <AiOutlineMenu size={40}/>
                         </div>
                     </>
                 }
@@ -50,7 +50,7 @@ const Navbar = () => {
                         <h5 onClick={() => redirect("GitHub")}>GitHub</h5>
                         <h5 onClick={() => redirect("Resume")}>Resume</h5>
                         <h5 onClick={() => redirect("Dev.to")}>Dev.to</h5>
-                        <AiOutlineClose onClick={toggleMenu}/>
+                        <AiOutlineClose size={40} onClick={toggleMenu}/>
                     </div>
                 </>
                 }
