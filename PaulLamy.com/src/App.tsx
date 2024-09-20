@@ -10,6 +10,7 @@ import CardMentor from './assets/images/cardmentor.png'
 import TraceChain from './assets/images/tracechain.png'
 import Mat434 from './assets/images/mat434.png'
 import Contact from './contact/Contact'
+import { Ref, RefObject, useEffect, useRef, useState } from 'react'
 
 // fonts
 // import "./assets/fonts/contb.ttf";
@@ -100,7 +101,74 @@ const redirect: Function = (hyperlink: string) => {
   }
 }
 
+// interface Options {
+//   // element used as viewport for checking visibility
+//   // null = defaults to browser viewport
+//   root: null,
+//   // grow or shrink each side of the root element's
+//   // bounding box before computing intersections
+//   rootMargin: string | "0px",
+//   // at what percentage of the target's visibility will
+//   // the callback be called
+//   threshold: number | 1
+// }
+
+// const useElementOnScreen = (options: Options) => {
+//   // reference to the element we want to observe,
+//   // initially null
+//   const containerRef = useRef(null);
+//   // display whenever item is in viewport
+//   const [isVisible, setIsVisible] = useState(false);
+//   // input: array of IntersectingObserverEntry
+//   const observerCallback = (entries: IntersectingObserverEntry[]) => {
+//     // take the first and only entry; if entry intersects with
+//     // viewport, set value of entry.isIntersecting to true/false
+//     const [entry] = entries;
+//     setIsVisible(entry.isIntersecting);
+//   }
+
+//   useEffect(() => {
+//     // intersection observer needs callback function 
+//     // and options as params.
+//     const observer = new IntersectingObserver(observerCallback, options)
+//     if (containerRef.current) observer.observe(containerRef.current);
+
+//     return () => {
+//       if (containerRef.current) observer.unobserve(containerRef.current);
+//     }
+//   }, [containerRef, options]);
+
+//   return { containerRef, isVisible };
+// }
+
+type HTMLRef = HTMLElement & HTMLDivElement;
+
+// custom hook for managing state of intersection of element
+const useIsVisible: Function = (ref: RefObject<HTMLRef>) => {
+  const [isIntersecting, setIsIntersecting] = useState(false);
+
+  useEffect(() => {
+    // runs callback function when element is intersecting with the viewport
+    const observer: IntersectionObserver = new IntersectionObserver(([entry]) => {
+      setIsIntersecting(entry.isIntersecting)
+    });
+
+    // ! means it cannot be null
+    observer.observe(ref.current!);
+
+    return () => {
+      // stop watching for changes when component is unmounted
+      observer.disconnect();
+    };
+  }, [ref]);
+
+  return isIntersecting;
+}
+
 function App() {
+  // ref that represents the DOM element of the current element in view
+  let currentElementRef = useRef();
+  let isVisible = useIsVisible(currentElementRef);
 
   return (
     <>
@@ -108,29 +176,29 @@ function App() {
         <div className="navbar"><Navbar /></div>
         <div className="hero"><Hero /></div>
         <div className="intro"><Intro /></div>
-        <div className="projects-container">
-          <h1>Here are the most recent projects I contributed to: </h1>
-          <div className="project" onClick={() => redirect("CM")}>
-            <Project title='CardMentor' description={cardMentorDesc} imagePath={CardMentor} imageWidth='10rem' imageHeight='10rem' techUsed={CMTechUsed} />
-          </div>
-          <div className="project" onClick={() => redirect("TC")}>
-            <Project title='TraceChain' description={tracechainDesc} imagePath={TraceChain} imageWidth='15rem' imageHeight='10rem' techUsed={TCTechUsed} />
-          </div>
-          <div className="project" onClick={() => redirect("M434")}>
-            <Project title='MAT434 Movie Rating Prediction' description={mat434Desc} imagePath={Mat434} imageWidth='15rem' imageHeight='10rem' techUsed={MAT434TechUsed} />
-          </div>
+        <div className="projects-container" ref={currentElementRef}>
+          {isVisible && <><h1>Here are the most recent projects I contributed to: </h1>
+            <div className="project" onClick={() => redirect("CM")}>
+              <Project title='CardMentor' description={cardMentorDesc} imagePath={CardMentor} imageWidth='10rem' imageHeight='10rem' techUsed={CMTechUsed} />
+            </div>
+            <div className="project " onClick={() => redirect("TC")}>
+              <Project title='TraceChain' description={tracechainDesc} imagePath={TraceChain} imageWidth='15rem' imageHeight='10rem' techUsed={TCTechUsed} />
+            </div>
+            <div className="project " onClick={() => redirect("M434")}>
+              <Project title='MAT434 Movie Rating Prediction' description={mat434Desc} imagePath={Mat434} imageWidth='15rem' imageHeight='10rem' techUsed={MAT434TechUsed} />
+            </div> </>
+          }
         </div>
-        <h1> I am a quick learner and can work with any tool for the job, but here is what I have extensive experience with:</h1>
-        <div className="tech">
+        <h1>I am a quick learner and can work with any tool for the job, but here is what I have extensive experience with:</h1>
+        <div className="tech " >
           <Tech title={bestTechnologiesTitle} items={bestTechnologiesArray} />
           <Tech title={alsoExperiencedTitle} items={alsoExperiencedArray} />
           <Tech title={whatIHaveBeenDoingTitle} items={whatIHaveBeenDoingArray} />
         </div>
-        <div className="contact">
+        <div className="contact ">
           <Contact />
         </div>
-
-      </div>
+      </div >
     </>
   )
 }
